@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  nfcgate:
+    build: .
+    container_name: nfcgate
+    volumes:
+      - ./plugins:/app/plugins
+    ports:
+      - 5566:5566
+    restart: unless-stopped
